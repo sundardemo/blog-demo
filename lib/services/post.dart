@@ -12,6 +12,7 @@ class PostService {
     var url = Uri.parse("${Constants().serverUrl}/posts");
     try {
       var resp = await http.get(url);
+
       var respJson = jsonDecode(resp.body);
       var postData = respJson['data'];
       posts =

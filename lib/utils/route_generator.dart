@@ -1,5 +1,6 @@
 import 'package:blog/screens/home/home.dart';
 import 'package:blog/screens/login/login.dart';
+import 'package:blog/screens/my-ads/ad-listing.dart';
 import 'package:blog/screens/my-ads/my-ads.dart';
 import 'package:blog/screens/register/register.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,9 @@ class RouteGenerator {
 
       case '/my-ads':
         return MaterialPageRoute(builder: (context) => MyAdsScreen());
+
+      case '/my-ads-new':
+        return MaterialPageRoute(builder: (context) => MyAdsListingScreen());
       // case '/result':
       //   return MaterialPageRoute(
       //     builder: (context) => ResultScreen(

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: CustomTheme().appTheme,
-      initialRoute: '/my-ads',
+      initialRoute: '/my-ads-new',
       onGenerateRoute: RouteGenerator().generateRoute,
     );
   }
