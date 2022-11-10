@@ -1,3 +1,4 @@
+import 'package:blog/screens/edit-profile/edit-profile.dart';
 import 'package:blog/screens/home/home.dart';
 import 'package:blog/screens/login/login.dart';
 import 'package:blog/screens/my-ads/ad-listing.dart';
@@ -24,6 +25,9 @@ class RouteGenerator {
 
       case '/my-ads-new':
         return MaterialPageRoute(builder: (context) => MyAdsListingScreen());
+
+      case '/edit-profile':
+        return MaterialPageRoute(builder: (context) => EditProfileScreen());
       // case '/result':
       //   return MaterialPageRoute(
       //     builder: (context) => ResultScreen(
