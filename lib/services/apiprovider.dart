@@ -26,19 +26,24 @@ class ApiProvider {
       var responce = await http.post(
         requestURL,
         headers: await _getHeaders(),
-        //body: jsonEncode(body),
+        body: jsonEncode(body),
       );
       responseJson = _handleResponse(responce);
     } catch (e) {
       print("error");
       print(e);
     }
+    print(responseJson);
     return responseJson;
   }
 
   _handleResponse(http.Response response) {
+    print(response.statusCode);
+    print(response.body);
     switch (response.statusCode) {
       case 200:
+        return jsonDecode(response.body);
+      case 201:
         return jsonDecode(response.body);
       case 401:
         return {'message': 'invalid request'};

@@ -15,10 +15,10 @@ class PostModel {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['_id'] = id;
-    data['title'] = title;
-    data['description'] = description;
-    data['date'] = date;
+    data['_id'] = id ?? '';
+    data['title'] = title ?? '';
+    data['description'] = description ?? '';
+    data['date'] = date ?? '';
     return data;
   }
 }

@@ -1,3 +1,4 @@
+import 'package:blog/screens/create-post/create-post.dart';
 import 'package:blog/screens/edit-profile/edit-profile.dart';
 import 'package:blog/screens/home/home.dart';
 import 'package:blog/screens/login/login.dart';
@@ -7,6 +8,8 @@ import 'package:blog/screens/register/register.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
+  String initialRoute = '/login';
+
   var generateRoute = ((settings) {
     var routeName = settings.name;
     var args = settings.arguments;
@@ -25,6 +28,9 @@ class RouteGenerator {
 
       case '/my-ads-new':
         return MaterialPageRoute(builder: (context) => MyAdsListingScreen());
+
+      case '/create-post':
+        return MaterialPageRoute(builder: (context) => CreatePostScreen());
 
       case '/edit-profile':
         return MaterialPageRoute(builder: (context) => EditProfileScreen());

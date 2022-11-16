@@ -45,6 +45,12 @@ class HomeScreen extends StatelessWidget {
           );
         },
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/create-post');
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }

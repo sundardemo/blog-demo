@@ -36,4 +36,10 @@ class PostService {
 
     return posts;
   }
+
+  void createPost(PostModel post) async {
+    var resp = await ApiProvider().post('/posts/', post.toJson());
+    print(resp['data']);
+    //return;
+  }
 }
